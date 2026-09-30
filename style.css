@@ -16,12 +16,16 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100% ;
+    justify-content: space-between;
+    align-items: center;
 }
 .grid{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
+    width: 750px;
+    height: 750px;
+    flex: none;
     
 }
 .gridColumn{
@@ -30,14 +34,15 @@ body{
     flex-direction: column;
 }
 .gridSquare{
-    flex: 1;
-    aspect-ratio: 1 / 1;
-    border: black , 0.5px dashed;
+    flex: 1 1 0;
+    border: black 0.5px solid;
 }
 .color {
     background-color: black;
 }
 .buttonDiv {
-    height: 100px;
-    flex: auto;
+    height: 50px;
+    padding: 10px;
+    flex: none;
+
 }
