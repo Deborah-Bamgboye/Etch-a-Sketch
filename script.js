@@ -32,15 +32,30 @@ function createGrid() {
 }
 createGrid()
 
+
+
 function colorME() {
     squares = document.querySelectorAll('.gridSquare')
 for (let i = 0; i < squares.length; i++) {
     const square = squares[i];
+        let iscoloured = false
+        let opacity = 0.1
     square.addEventListener('mouseover', function () {
-        square.classList.add('color')
-    } )
+        //square.classList.add('color')
+        
+        if (!iscoloured){
+        square.setAttribute('style', `background-color: rgb(${(Math.floor(Math.random()*255))} ${(Math.floor(Math.random()*255))} ${(Math.floor(Math.random()*255))});`)
+        iscoloured = true
+        } 
+        if (opacity < 1) {
+                opacity += 0.1;
+                
+            }
+        square.style.opacity = opacity})
+    
 }
 }
+
 colorME()
 
 button.addEventListener('click', function(){
